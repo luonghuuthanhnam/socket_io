@@ -1,0 +1,52 @@
+{
+  "UsersData": [
+    {
+      "id": "luonghuuthanhnam5@gmail.com",
+      "pass": "luongnam01",
+      "name": "Lương Hữu Thành Nam",
+      "age": "21",
+      "gender": "Nam",
+      "height": "176",
+      "weight": "60",
+      "code": "bn00001opl",
+      "sickness": "Viêm cơ lưng",
+      "RFID": "8b1fb0e2c6",
+      "datetime": "8h30 - Thứ 2 , ngày 26 , tháng 11 năm 2018",
+      "place": "Đại học Sư Phạm Kỹ Thuật thành phố Hồ Chí Minh",
+      "note": "Bạn nhớ đi đúng giờ hẹn nhé",
+      "doctorremind": "Bạn tránh mang vác vật nặng nhé, chú ý ngồi học/làm việc đúng tư thế"
+    },
+    {
+      "id": "example",
+      "pass": "example",
+      "name": "Nguyễn Thị Ví Dụ",
+      "age": "20",
+      "gender": "Nữ",
+      "height": "169",
+      "weight": "69",
+      "code":  "bn00002opl",
+      "sickness": "Bệnh ví dụ",
+      "RFID": "e82628f610",
+      "datetime": "8h30 thứ 2 ngày 20 tháng 12 năm 2018",
+      "place": "Đại học sư phạm kỹ thuật thành phố hồ chí minh",
+      "note": "nhớ đi đúng giờ hẹn",
+      "doctorremind": "tránh mang vác vật nặng"
+    },
+    {
+      "id": "xuanhai1998@gmail.com",
+      "pass": "xuanhai",
+      "name": "Nguyễn Đào Xuân Hải",
+      "age": "21",
+      "gender": "Nam",
+      "height": "172",
+      "weight": "69",
+      "code": "bn00003opl",
+      "sickness": "Bệnh đau lưng dưới",
+      "RFID": "e82628f610",
+      "datetime": "8h30 thứ 2 ngày 20 tháng 12 năm 2018",
+      "place": "Đại học sư phạm kỹ thuật thành phố hồ chí minh",
+      "note": "nhớ đi đúng giờ hẹn",
+      "doctorremind": "tránh mang vác vật nặng"
+    }
+  ]
+}

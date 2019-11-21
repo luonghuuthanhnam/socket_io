@@ -39,7 +39,7 @@
                 return false;
             });
             $('form#send_room').submit(function(event) {
-                socket.emit('my_room_event', {room: $('#room_name').val(), data: $('#room_data').val()});
+                socket.emit('my_room_event', {room: $('#room_name').val(), data: $('#room_data').val(), client: $('#client_name').val()});
                 return false;
             });
             $('form#close').submit(function(event) {
@@ -75,6 +75,7 @@
     <form id="send_room" method="POST" action='#'>
         <input type="text" name="room_name" id="room_name" placeholder="Room Name">
         <input type="text" name="room_data" id="room_data" placeholder="Message">
+        <input type="text" name="client_name" id="client_name" placeholder="Client Name">
         <input type="submit" value="Send to Room">
     </form>
     <form id="close" method="POST" action="#">
