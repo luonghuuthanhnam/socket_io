@@ -2,6 +2,7 @@ import asyncio
 import json
 from aiohttp import web
 import socketio
+from translate import Translator
 qr_code = ""
 users_data = json.load(open('userdata.json',encoding="utf8"))
 
@@ -28,7 +29,6 @@ async def my_event(sid, message):
 @sio.event
 async def my_broadcast_event(sid, message):
     await sio.emit('my_response', {'data': message['data']})
-
 
 @sio.event
 async def join(sid, message):
@@ -118,6 +118,20 @@ async def Tele_Send_QR(sid, message):
     global qr_code
     qr_code = message
     print('tele send qr')
+
+@sio.on('Speech-Translate')
+async def Speech_Translate(sid, message):
+    a = message.split('@')
+    out = ""
+    if a[0]=="tele":
+        translator = Translator(from_lang=a[2].rstrip(), to_lang=a[3].rstrip())
+        out = "tele@" + translator.translate(a[1])
+    else:
+        translator = Translator(from_lang=a[2].rstrip(), to_lang=a[3].rstrip())
+        out = "doctor@" + translator.translate(a[1])
+    print(out)
+    await sio.emit('Server-Translated', out)
+
 
 app.router.add_static('/static', 'static')
 app.router.add_get('/', index)
